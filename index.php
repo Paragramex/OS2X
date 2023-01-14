@@ -51,7 +51,7 @@ if (isset($_GET['action'])) {
               <li><a href="index.php">All packages</a></li>
               <li><a href="random.php">Random package</a></li>
           </ul>
-          <span class="header-section">Random 2 sites using these</span>
+          <span class="header-section">Random 2 sites of mine:</span>
           <ul>
               <?php 
     $sites = array(

@@ -95,8 +95,16 @@ if (isset($_POST['install'])) {
         $softwareobj->name = $_POST['software'];
         if ($_POST['software'] === 'Custom_Key')
             $softwareobj->name = $_POST['software_name'];
-        if ($_POST['software'] !== "Custom_Key")
-            $softwareobj->contents = file_get_contents(__DIR__ . '/' . $_POST['software'] . '.txt');
+        if ($_POST['software'] != "Custom_Key"){
+  
+if (file_exists(__DIR__ . '/' . $_POST['software'] . '.txt')) {
+     $softwareobj->contents = file_get_contents(__DIR__ . '/' . $_POST['software'] . '.txt');
+}
+else {
+fopen(__DIR__ . '/' . $_POST['software'] . '.txt', "w");
+	$softwareobj->contents = file_get_contents(__DIR__ . '/' . $_POST['software'] . '.txt');
+	
+}}
         else
             $softwareobj->contents = $_POST['software_contents'];
         fwrite(fopen(__DIR__ . '/os2x_software.json', "w+"), json_encode($softwareobj));
