@@ -1,0 +1,6 @@
+- add self destruct module
+ - use locust?
+
+- add backup to cloud module
+
+ALL INSPIRED BY A.X.L

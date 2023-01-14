@@ -1,0 +1,31 @@
+.header {
+	background-color: purple;
+	color: white;
+	font-style: italic;
+}
+body {
+	font-family: Arial;
+}
+label {
+	display: block;
+}
+.errorbox {
+	background-color: #D0342C;
+	color: white;
+}
+label[hidden] {
+	display: none;
+}
+.tag {
+	background-color: skyblue;
+	border:1px solid blue;
+	color: black;
+	border-radius: 5px;
+}
+.goodbox {
+	border:1px solid lime;
+	background-color: #AFE1AF;
+}
+.header>div>a {
+	color: white;
+}
